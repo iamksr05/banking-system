@@ -7,7 +7,7 @@ public class AdminDashboard {
             System.out.println("\n\n");
             System.out.println("1. Create Account");
             System.out.println("2. Delete Account");
-            System.out.println("3. Modify account");
+            System.out.println("3. Update account details");
             System.out.println("4. Deposit Money");
             System.out.println("5. Withdraw Money");
             System.out.println("6. View All Accounts");
@@ -23,11 +23,12 @@ public class AdminDashboard {
                 AdminServices.deleteAccount(input);
                 
             } else if (adminChoice == 3) {
-                AdminServices.depositAmount(input);
                 
             } else if (adminChoice == 4) {
+                AdminServices.depositAmount(input);
                 
             } else if (adminChoice == 5) {
+                AdminServices.withdrawAmount(input);
                 
             } else if (adminChoice == 6) {
                 AdminServices.showAllAccounts(input);

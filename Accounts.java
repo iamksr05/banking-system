@@ -24,13 +24,17 @@ class Accounts {
         return accountNumber;
     }
 
-    void deposit(int amount) {
+    double getBalance() {
+        return balance;
+    }
+
+    void deposit(double amount) {
         balance += amount;
     }
 
-    // void withdraw(int amount) {
-
-    // }
+    void withdraw(double amount) {
+        balance -= amount;
+    }
 
     // void transfer(long targetAccount, int amount) {
 
