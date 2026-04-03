@@ -127,14 +127,14 @@ public class AdminServices {
                             break;
 
                         } else if (Bank.accounts.get(i).getBalance() == Double.MAX_VALUE) {
-                            System.out.println("Maximum limit reached!");
+                            System.out.println("\n\033[1;31mMaximum limit reached!\033[0m");
                             System.out.println("Can't deposit more amount to " + Bank.accounts.get(i).getName() + "'s account.");
 
                         } else {
                             Bank.accounts.get(i).deposit(amount);
                             System.out.println("\n\033[32m₹"+ amount + " deposited successfully to " + Bank.accounts.get(i).getName() + "'s account\033[0m\n");
+                            break;
                         }
-                        break;
                     }
                 }
 
@@ -161,7 +161,54 @@ public class AdminServices {
 
 
     static void withdrawAmount(Scanner input) {
-        
+        while (true) {
+
+            if (Bank.accounts.size() == 0) {
+                System.err.println("\nNo bank account available.\n");
+                break;
+                
+            } else {
+                System.out.print("\nEnter account number to withdraw money: ");
+                long acNo = input.nextLong();
+
+                int i;
+
+                for (i = 0; i < Bank.accounts.size(); i++) {
+                    if (Bank.accounts.get(i).getAccountNum() == acNo) {
+                        System.out.println("\nEnter amount to withdraw: ");
+                        double amount = input.nextDouble();
+
+                        if (Bank.accounts.get(i).getBalance() - amount <= 0) {
+                            System.out.println("\n\033[1;31mInsufficient balance.\\033[0m");
+                            break;
+
+                        } else {
+                            Bank.accounts.get(i).withdraw(amount);
+                            System.out.println("\n\033[31m₹"+ amount + " withdrawn successfully from " + Bank.accounts.get(i).getName() + "'s account\033[0m\n");
+                            break;
+                        }
+                    }
+                }
+
+                if (i != 0 && i == Bank.accounts.size()) {
+                    System.err.println("\nAccount not found! Try Again.");
+                }
+
+                System.out.println("\n\nPress '1' to see account balance and return to menu.");
+                System.out.println("<< Press any key to return to menu <<");
+                System.out.print(">>> ");
+                input.nextLine();
+                String back = input.nextLine();
+    
+                if (back.equals("1")) {
+                    System.out.println("\n\033[34mAccount balance: " + Bank.accounts.get(i).getBalance() + "\033[0m\n");
+                    break;
+                } else {
+                    break;
+                }
+            }
+
+        }
     }
     
 }
