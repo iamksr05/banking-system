@@ -18,26 +18,33 @@ class Login {
     }
 
     static void customerPass(Scanner input) {
-        System.out.println("Enter your account number: ");
-        int userAcc = input.nextInt();
+        System.out.print("\nEnter your account number: ");
+        long userAcc = input.nextLong();
+        input.nextLine();
         
-        System.out.println("Enter your user Password: ");
-        int userPass = input.nextInt();
+        System.out.print("Enter your user Password: ");
+        String userPass = input.nextLine();
 
         boolean found = false;
         for (int i = 0; i < Bank.accounts.size(); i++) {
             if (userAcc == Bank.accounts.get(i).getAccountNum()) {
                 found = true;
 
+                if (userPass.equals(Bank.accounts.get(i).getPass())) {
+                    CustomerDashboard cust = new CustomerDashboard();
+                    cust.CustomerOption(input, Bank.accounts.get(i));
+                    break;
+                }
+                
+                System.out.println("Incorrect password!");
+                break;
+
+            }
+
+            if(!found) {
+                System.out.println("Account not found!");
             }
         }
 
-        if (userAcc != 2 && userPass != 2) {
-            CustomerDashboard customerDash = new CustomerDashboard();
-            customerDash.CustomerOption(input);
-
-        } else {
-            System.out.println("Incorrect credentials. Try again!");
-        }
     }
 }
