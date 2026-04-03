@@ -29,6 +29,8 @@ public class CustomerDashboard {
             } else if (adminChoice == 7) {
                 System.out.println("Logged out successfully!");
                 break;
+            } else {
+                System.out.println("Invalid choice! Try again.");
             }
 
 

@@ -24,9 +24,9 @@ class Accounts {
         return accountNumber;
     }
 
-    // void deposit(int amount) {
-
-    // }
+    void deposit(int amount) {
+        balance += amount;
+    }
 
     // void withdraw(int amount) {
 

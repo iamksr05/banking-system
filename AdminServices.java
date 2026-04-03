@@ -62,7 +62,7 @@ public class AdminServices {
         while (true) {
 
             if (Bank.accounts.size() == 0) {
-                System.err.println("\nNo bank account remaining.");
+                System.err.println("\nNo bank account available.");
             }
 
             System.out.print("Enter Account Number to delete: ");
@@ -100,5 +100,11 @@ public class AdminServices {
                 break;
             }
         }
+    }
+
+
+    static void depositAmount(Scanner input) {
+        System.err.println();
+        
     }
 }
