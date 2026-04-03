@@ -5,10 +5,11 @@ public class CustomerDashboard {
     void CustomerOption(Scanner input, Accounts user) {
         while (true) {
             System.out.println("\n\n1. Check Balance");
-            System.out.println("2. View account details");
-            System.out.println("3. Transfer money");
-            System.out.println("4. View transaction history");
-            System.out.println("5. Logout");
+            System.out.println("2. Withdraw Money");
+            System.out.println("3. View account details");
+            System.out.println("4. Transfer money");
+            System.out.println("5. View transaction history");
+            System.out.println("6. Logout");
             System.out.print(">>> ");
             
             int adminChoice = input.nextInt();
@@ -17,14 +18,16 @@ public class CustomerDashboard {
                 CustomerServices.checkBalance(user);
 
             } else if (adminChoice == 2) {
-                CustomerServices.getUserInfo(user);
-
+                
             } else if (adminChoice == 3) {
-                CustomerServices.amountTransfer(input, user);
-
+                CustomerServices.getUserInfo(user);
+                
             } else if (adminChoice == 4) {
+                CustomerServices.amountTransfer(input, user);
                 
             } else if (adminChoice == 5) {
+                
+            } else if (adminChoice == 6) {
                 System.out.println("Logged out successfully!");
                 break;
             } else {
