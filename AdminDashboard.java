@@ -23,6 +23,7 @@ public class AdminDashboard {
                 AdminServices.deleteAccount(input);
                 
             } else if (adminChoice == 3) {
+                AdminServices.updateAccountInfo(input);
                 
             } else if (adminChoice == 4) {
                 AdminServices.depositAmount(input);

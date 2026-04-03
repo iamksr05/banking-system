@@ -5,7 +5,7 @@ class Launch {
     public static void main(String[] args) {
         
         while (true) {
-            System.out.println("Welcome to PW Bank. Login as\n1. Admin\n2. Customer\n3. Exit");
+            System.out.print("Welcome to PW Bank. Login as\n1. Admin\n2. Customer\n3. Exit\n>>> ");
             int choice = input.nextInt();
 
             if (choice == 1) {

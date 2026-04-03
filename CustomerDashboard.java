@@ -8,9 +8,7 @@ public class CustomerDashboard {
             System.out.println("2. View account details");
             System.out.println("3. Transfer money");
             System.out.println("4. View transaction history");
-            System.out.println("5. Update mobile number");
-            System.out.println("6. Update address");
-            System.out.println("7. Logout");
+            System.out.println("5. Logout");
             
             int adminChoice = input.nextInt();
             
@@ -21,12 +19,8 @@ public class CustomerDashboard {
             } else if (adminChoice == 3) {
 
             } else if (adminChoice == 4) {
-
-            } else if (adminChoice == 5) {
-
-            } else if (adminChoice == 6) {
                 
-            } else if (adminChoice == 7) {
+            } else if (adminChoice == 5) {
                 System.out.println("Logged out successfully!");
                 break;
             } else {

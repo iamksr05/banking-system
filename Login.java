@@ -18,13 +18,21 @@ class Login {
     }
 
     static void customerPass(Scanner input) {
-        System.out.println("Enter your user ID: ");
-        int userId = input.nextInt();
+        System.out.println("Enter your account number: ");
+        int userAcc = input.nextInt();
         
         System.out.println("Enter your user Password: ");
         int userPass = input.nextInt();
 
-        if (userId != 2 && userPass != 2) {
+        boolean found = false;
+        for (int i = 0; i < Bank.accounts.size(); i++) {
+            if (userAcc == Bank.accounts.get(i).getAccountNum()) {
+                found = true;
+
+            }
+        }
+
+        if (userAcc != 2 && userPass != 2) {
             CustomerDashboard customerDash = new CustomerDashboard();
             customerDash.CustomerOption(input);
 
