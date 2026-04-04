@@ -20,6 +20,7 @@ public class CustomerDashboard {
                 CustomerServices.checkBalance(user);
 
             } else if (adminChoice == 2) {
+                CustomerServices.withdrawMoney(input, user);
                 
             } else if (adminChoice == 3) {
                 CustomerServices.getUserInfo(user);

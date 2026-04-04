@@ -6,7 +6,7 @@ public class CustomerServices {
     }
 
     static void withdrawMoney(Scanner input, Accounts user) {
-        System.out.println("\nEnter amount to withdraw: ");
+        System.out.print("\nEnter amount to withdraw: ");
         double amount = input.nextDouble();
         if (amount <= 0) {
             System.out.println("\033[31mInvalid amount!\033[0m");

@@ -227,7 +227,7 @@ public class AdminServices {
                 for (i = 0; i < Bank.accounts.size(); i++) {
                     if (Bank.accounts.get(i).getAccountNum() == acNo) {
                         found = true;
-                        System.out.println("\nEnter amount to deposit: ");
+                        System.out.print("\nEnter amount to deposit: ");
                         double amount = input.nextDouble();
                         if (amount <= 0) {
                             System.out.println("\033[31mInvalid amount!\033[0m");
@@ -295,7 +295,7 @@ public class AdminServices {
                 for (i = 0; i < Bank.accounts.size(); i++) {
                     if (Bank.accounts.get(i).getAccountNum() == acNo) {
                         found = true;
-                        System.out.println("\nEnter amount to withdraw: ");
+                        System.out.print("\nEnter amount to withdraw: ");
                         double amount = input.nextDouble();
                         if (amount <= 0) {
                             System.out.println("\033[31mInvalid amount!\033[0m");
