@@ -3,8 +3,10 @@ import java.util.Scanner;
 public class CustomerDashboard {
 
     void CustomerOption(Scanner input, Accounts user) {
+        System.out.println("\n\n\033[1;37mWelcome to PW Bank " + user.getName() + "!\033[0m");
         while (true) {
-            System.out.println("\n\n1. Check Balance");
+
+            System.out.println("\n1. Check Balance");
             System.out.println("2. Withdraw Money");
             System.out.println("3. View account details");
             System.out.println("4. Transfer money");
@@ -28,10 +30,10 @@ public class CustomerDashboard {
             } else if (adminChoice == 5) {
                 
             } else if (adminChoice == 6) {
-                System.out.println("Logged out successfully!");
+                System.out.println("\nLogged out successfully!");
                 break;
             } else {
-                System.out.println("Invalid choice! Try again.");
+                System.out.println("\nInvalid choice! Try again.");
             }
 
 

@@ -35,10 +35,10 @@ public class AdminDashboard {
                 AdminServices.showAllAccounts(input);
 
             } else if (adminChoice == 7) {
-                System.out.println("Logged out successfully!\n\n");
+                System.out.println("\nLogged out successfully!\n\n");
                 break;
             } else {
-                System.out.println("Invalid choice! Try again.");
+                System.out.println("\nInvalid choice! Try again.");
             }
         }
     }
